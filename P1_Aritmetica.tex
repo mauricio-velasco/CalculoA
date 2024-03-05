@@ -1,0 +1,127 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 1: Repaso desigualdades e Inducción.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate} 
+\item Encuentre todos los números reales $x$ que cumplen las siguientes fórmulas, justificando su respuesta
+
+\begin{enumerate}
+\item $5-x^2<8$
+\item $(x-1)(x-3)>0$
+\item $(x-\pi)(x+5)(x-3)>0$
+\item $\frac{1}{x}+\frac{1}{1-x}>0$
+\item $\frac{x-1}{x+1}>0$
+\item $|x-1|+|x-2|>1$
+\item $|x-1||x+2|=3$
+\end{enumerate}
+
+\item Escriba los \emph{axiomas de los números reales positivos} vistos en clase y utilice esos axiomas para demostrar las siguientes afirmaciones:
+\begin{enumerate}
+\item Si $a<b$ y $c>0$ entonces $ac<bc$.
+\item Si $a<b$ y $c<0$ entonces $ac>bc$.
+\item Si $0\leq a<b$ entonces $a^2<b^2$.
+\end{enumerate}
+
+\item Enuncie la \emph{desigualdad del triángulo} y utilícela para dar demostraciones muy cortas de las siguientes afirmaciones:
+\begin{enumerate}
+\item $|x-y|\leq |x|+|y|$
+\item $|x|-|y|\leq |x-y|$
+\item $||x|-|y||\leq |x-y|$ 
+\item $|x+y+z|\leq |x|+|y|+|z|$. Para cuáles $x,y,z$ se alcanza la igualdad? 
+\item $\max(x,y)=\frac{x+y+|x+y|}{2}$
+\item $\min(x,y)=\frac{x+y-|y-x|}{2}$
+\end{enumerate}
+
+\item Suponga que $x,y,x_0,y_0$ son números reales cualquiera y $\epsilon>0$. 
+Asumiendo que $|x-x_0|<\epsilon/2$ y $|y-y_0|<\epsilon/2$, demuestre las siguientes dos desigualdades:
+\begin{enumerate}
+\item $|(x+y)-(x_0+y_0)|\leq \epsilon$
+\item $|(x-y)-(x_0-y_0)|\leq \epsilon$
+\end{enumerate}
+  
+\item Suponga que $x,y,x_0,y_0$ son números reales cualquiera y $\epsilon>0$. 
+\begin{enumerate}
+\item Asumiendo que $|x-x_0|<\min\left(\frac{\epsilon}{2(|y_0|+1)},1\right)$ y que $|y-y_0|<\min\left(\frac{\epsilon}{2(|x_0|+1)},1\right)$, demuestre la desigualdad $|xy-x_0y_0|<\epsilon$.
+
+\item Interprete la desigualdad del ejercicio anterior, qué es más fácil multiplicar con precisión aproximada? números pequeños o números grandes? Justifique su respuesta.
+\end{enumerate}
+
+\item Sean $x,x_0$ números reales con $x_0\neq 0$. 
+\begin{enumerate}
+\item Encuentre qué debe ser $K$ para poder demostrar que  $|x-x_0|<K$ implica 
+\[\left|\frac{1}{x}-\frac{1}{x_0}\right|<\epsilon\]
+($K$ debe depender de $\epsilon$ y de $x_0$).
+
+\item Interprete la desigualdad anterior. Qué es más fácil numéricamente, dividir por números grandes o por números peque\~nos? Justifique su respuesta.
+\end{enumerate}
+
+\item Demuestre que las siguientes fórmulas son válidas para cualquier entero positivo $n$:
+\begin{enumerate}
+\item $1^2+2^2+\dots+n^2 = \frac{n(n+1)(2n+1)}{6}$
+\item $1^3+2^3+\dots+n^3 = (1+2+\dots+n)^2$
+\item Implemente las fórmulas en python y verifique su validez (usando \verb!assert!) para los primeros $100$ valores de $n$ (escriba sólo el código de su implementación más no el output).
+\end{enumerate} 
+
+\item Resuelva los siguientes problemas:
+\begin{enumerate}
+\item
+Usando el ejercicio anterior, encuentre fórmulas para las siguientes sumas: 
+\begin{enumerate}
+\item $1+3+5+7+\dots+ 2n-1 = ?$
+\item $1^2+3^2+5^2+\dots+ (2n-1)^2 = ?$
+\end{enumerate}
+\item Implemente las fórmulas que encontró en Python y verifique su validez (usando \verb!assert!) para los primeros $100$ valores de $n$ (entregue solo el código de su implementación pero no el output).
+\item Demuestre la validez de las fórmulas que encontró usando inducción.
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+\end{document}
+
+
+
