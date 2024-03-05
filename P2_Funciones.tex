@@ -1,0 +1,150 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 2: Funciones, gráficas y límites.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate} 
+\item Dibuje en planos cartesianos distintos las regiones $(x,y)$ del plano que cumplen cada una de las siguientes condiciones:
+\begin{enumerate}
+\item $x>y$
+\item $y<x^2$
+\item $x+y$ es un entero
+\item $(x-1)^2+(y-2)^3<1$
+\item $x^2<y<x^4$
+\end{enumerate}
+
+\item Dibuje en planos cartesianos distintos las regiones $(x,y)$ del plano que cumplen cada una de las siguientes igualdades:
+
+\begin{enumerate}
+\item $|x|+|y|=1$
+\item $|x-1|=|y-1|$
+\item $xy=0$
+\item $x^2-2y+4=0$
+\item $x^2-y^2=0$
+\item $x=|y|$
+\item $x=\sin(y)$
+\end{enumerate}
+
+\item Use \verb!pyplot! para obetener dibujos de las gráficas de las funciones de abajo. Incluya su implementación y las gráficas de las funciones.  En cada una describa qué pasa cerca de cero y cuando $x$ es muy grande. 
+\begin{enumerate}
+\item $f(x)=x+\frac{1}{x}$
+\item $g(x)=x-\frac{1}{x}$
+\item $h(x)=x^2+\frac{1}{x^2}$
+\item $u(x)=x^2-\frac{1}{x^2}$
+\end{enumerate}
+
+\item Mirando sólo la gráfica de la función $f(x)$ de la parte $(a)$  del ejercicio anterior, dibuje (a mano) las gráficas de las siguientes funciones:
+\begin{enumerate}
+\item $f(x-2)$
+\item $f(x)-2$
+\item $2f(x)$
+\item $f(2x)$
+\item $3f(3(x-1))+2$
+\end{enumerate}
+
+
+
+
+\item El símbolo $ReLu(x)=\max(x,0)$. Dibuje las siguientes functiones para $-2\leq x\leq 2$
+\begin{enumerate}
+\item $f(x)=ReLu(x)$
+\item $f(x)=x+ReLu(x)$
+\item $f(x)=ReLu(x)^2+x$
+\item Demuestre que $|x|=ReLu(x)+ReLu(-x)$.
+\end{enumerate}
+
+\item Recuerde que una función es \emph{par} si $f(x)=f(-x)$ para todo valor de $x$ e impar si $f(-x)=-f(x)$ para todo valor de $x$. Demuestre que toda función se puede escribir de manera única como la suma de una función par y una función impar.
+
+
+\item Nos dicen que $\lim_{x\rightarrow 0}\frac{\sin(x)}{x}=1$ 
+\begin{enumerate}
+\item Implemente un programa en Python que calcule los valores de $\frac{\sin(x)}{x}$ cerca de cero (en $0.1$,$0.01$,$0.001$, etc.). Qué dicen estos números sobre el comportamiento de las funciones $\sin(x)$ y $x$ cerca de cero? Haga graficas en \verb!pyplot! que justifiquen su respuesta.
+
+\item Usando que $\lim_{x\rightarrow 0}\frac{\sin(x)}{x}=1$ y las fórmulas para seno y coseno de la suma de dos ángulos calcule los siguientes límites explicando cuidadosamente su razonamiento:
+
+\begin{enumerate}
+\item $\lim_{x\rightarrow 0} \frac{\sin(2x)}{x}=$ 
+\item Si $a,b$ son números reales calcule $\lim_{x\rightarrow 0} \frac{\sin(ax)}{\sin(bx)}=$ (el resultado depende de $a$ y $b$).
+\item $\lim_{x\rightarrow 0} \frac{\sin(a+x)-\sin(a)}{h}=$ (el resultado depende de $a$) 
+\item $\lim_{x\rightarrow 0} \frac{x\sin(x)}{1-\cos(x)}=$
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\item Dibuje la gráfica de una función cualquiera que cumpla todas las siguientes condiciones:
+\begin{enumerate}
+\item $f(1)=3$
+\item $\lim_{x\rightarrow 1} f(x)=2$
+\item $\lim_{x\rightarrow \infty} f(x)=3$
+\item $\lim_{x\rightarrow -\infty} f(x)=-3$
+\item $f(x)$ es impar (es decir cumple $f(-x)=-f(x)$ para todo $x$).
+\item $\lim_{x\rightarrow 0^{+}} f(x)=\infty$.
+\end{enumerate}
+
+\item Si $n$ un entero positivoy $f(x)$ es una función decimos que $f(x)$ tiene \emph{orden polinomial $n$ en el origen} si $\lim_{x\rightarrow 0} \frac{f(x)}{x^n}=1$. Suponga que $f(x)$ tiene orden polinomial $n$ y que $g(x)$ tiene orden polinomial $m$ en el origen.
+
+\begin{enumerate}
+\item Cuánto vale $\lim_{x\rightarrow 0} \frac{f(x)}{g(x)}$? (la depende de $m$ y $n$).
+\item Cuál es el orden polinomial de la función $f(x)g(x)$ en el origen?
+\item Cuál es el orden polinomial de la función $f(x)+g(x)$ en el origen?
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+\end{document}
+
+
+
+\item El símbolo $[x]$ denota el entero más grande $\leq x$. Dibuje la gráfica de las siguientes funciones
+\begin{enumerate}
+\item $f(x)=[x]$
+\item $f(x)=\left[\frac{1}{x}\right]$
+\item $f(x)=x-[x]$
+\end{enumerate}
