@@ -1,0 +1,93 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 3: Funciones descritas con palabras y más límites.}
+\author{Mauricio Velasco}
+\maketitle{}
+{\bf I.} Para cada uno de los siguientes problemas defina variables, explique con palabras y/o con un dibujo lo que significan sus variables, encuentre expresiones para las funciones deseadas en términos de las variables que definió y haga (usando \verb!python!) dibujos de las funciones que encontró.\\
+\begin{enumerate} 
+\item Queremos construir una caja cúbica sin tapa de altura $a$. Encuentre: una fórmula para el volumen $V(a)$ y otra para el área superficial $S(a)$ de la caja.
+
+\item Una caja rectangular tiene un volumen de $1000cm^3$. La longitud de la base es el doble de la altura $h$. El material de la base vale $100$ por $cm^2$ y el de la pared $50$ por $cm^2$. Encuentre la función de costo $C(h)$ de la caja.
+
+\item El punto $(x,y)$ esta en la recta $y=4x+7$. Encuentre la función $d(x)$ que mide la distancia entre $(x,y)$ y el origen.
+
+\item El punto $(x_1,x_2)$ esta en la hipérbola $x_2^2-x_1^2=4$. Encuentre la función $r(x_2)$ que mide la distancia entre $(2,0)$ y $(x_1,x_2)$.
+
+\item Un rectángulo centrado en el origen y paralelo a los ejes tiene longitud de la base $b$ y altura $a$. El rectángulo esta inscrito en el círculo de radio $4$. Encuentre $a(b)$. 
+
+\item Los reglamentos de seguridad de una escalera extensible requieren que, cuando la escalera este apoyada en la pared, por cada unidad que suba verticalmente debe estar a una distancia de exáctamente $1/4$ de unidad de la pared.  Encuentre la altura ideal de trabajo $a(\ell)$ si la escalera tiene longitud $\ell$.
+
+\item Un cilindro circular recto de radio $r$ se inscribe en una esfera de radio $10$. Encuentre el volumen $V(r)$ del cilindro.
+
+\item Una ventana normanda tiene la forma de un semicírculo pegado a un rectángulo \url{https://search.library.wisc.edu/digital/AGS7KII67JFJ5S8Q}. Si la ventana tiene un perímetro de $8m$. Encuentre la función $A(b)$ que mide el área de la ventana como función de la longitud de la base.
+
+\item Un alambre de $10m$ de longitud se corta en dos partes. Una se dobla formando un cuadrado y la otra formando un triángulo equilatero. Encuentre la función $B(c)$ que mide el área encerrada por ambas figuras como función del lugar de corte $c$ con $0\leq c\leq 10$.
+
+\item Un vendedor de autos vende un auto por $375$ USD al mes por cinco a\~nos. Sea $x$ la tasa de interés mensual que el vendedor cobra. Cuál es el valor presente neto (es decir descontado) de la venta $V(x)$? 
+
+\item Un faro alumbra a una costa recta que esta a $100$ metros de distancia. Encuentre la longitud del haz de luz desde el faro hasta la costa como función del ángulo que hace la posición de la linterna y la recta perpendicular a la costa que cruza por el centro del faro (visto desde arriba).
+
+\noindent{\bf II} Para los siguientes ejercicios haga en \verb!pyplot! un dibujo de la función en la región de interés, estime el vaolr del límite y luego demuestre la validez de su estimación con las reglas de cálculo de límites:
+
+
+\item 
+\begin{enumerate}
+\item $\lim_{x\rightarrow 2} \frac{x^3-8}{x-2}=$
+\item $\lim_{x\rightarrow 3}\frac{x^3-8}{x-2}=$
+\item $\lim_{x\rightarrow y} \frac{x^n-y^n}{x-y}=$ (el límite depende del valor de $n$ y de $y$ pero puede usar el computador para mirar algunos valores fijos que ayuden a descubrir el patrón general) 
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item $\lim_{x\rightarrow 0} \frac{1-\sqrt{1-x^2}}{x}=$
+\item $\lim_{x\rightarrow 1} \frac{\sin(x^2-1)}{x-1}=$.
+\item $\lim_{x\rightarrow \infty} \frac{\sin(x)}{x}=$
+
+\item $\lim_{x\rightarrow \infty} x\sin(1/x)=$
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}
