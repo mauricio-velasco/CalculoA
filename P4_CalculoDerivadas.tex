@@ -1,0 +1,98 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 4: Cálculo de derivadas.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate}
+\item {\bf Definiciones básicas.} Complete los seguientes enunciados con definiciones correctas y completas:
+\begin{enumerate}
+\item La función $f(x)$ es continua en $x=a$ si...
+\item El valor de la derivada de la función $h(x)$ en el punto $x=8$ es el valor del siguiente límite...
+\item La interpretación geométrica del número $f'(a)$ es que este es igual a la pendiente de...
+\end{enumerate}
+
+
+\item Sea $f(x)=1/x$. 
+\begin{enumerate}
+\item Encuentre una fórmula para $f'(a)$ a partir de la definición de la derivada como un límite.
+\item Encuentre la ecuación de la recta tangente a la gráfica de $f$ en el punto $(a,1/a)$.
+\item Demuestre que para todo número $a$, la recta tangente del punto anterior intersecta a la gráfica de $f$ sólamente en el punto $(a,1/a)$. 
+\end{enumerate}
+\item Sea $T(x)=1/\sqrt{x}$
+\begin{enumerate}
+\item Encuentre una fórmula para $T'(a)$ a partir de la definición de la derivada como un límite asumiendo $a>0$
+\item Qué puede decir sobre $T'(0)$? Haga una gráfica en \verb!pyplot! que acompañe y justifique su respuesta.
+\end{enumerate}
+
+\item Demuestre, usando inducción matemática y la regla del producto que la derivada del polinomio $f_k(x)=x^k$ en $a$ es $ka^{k-1}$.
+
+\item Demuestre, usando la definición de derivada, que para todo par de funciones $f,g$  diferenciables en $a$ y para todo número real $c$ se tiene que:
+\begin{enumerate}
+\item $\left(f(x)+g(x)\right)'(a) = f'(a)+g'(a)$
+\item $\left(cf(x)\right)'(a)= cf'(a)$.
+\end{enumerate} 
+
+
+
+\item Calcule una fórmula para $f'(x)$ en los siguientes casos (puede usar todas las reglas de diferenciación que vimos en clase). En cada caso, usando \verb!pyplot! haga un dibujo de la funci\'on y de la recta con pendiente $f'(0.5)$ que pasa por $(0.5,f(0.5))$.
+\begin{enumerate}
+\item $f(x)=\sin(x+x^2)$
+\item $f(x)=\sin(x)+\sin(x^2)$
+\item $f(x)=\sin(\sin(x))$
+\item $f(x)=\sin(x+\sin(x))$
+\end{enumerate}
+
+
+\item Calcule una fórmula para $f'(x)$ en los siguientes casos (puede usar todas las reglas de diferenciación que vimos en clase)  En cada caso, usando \verb!pyplot! haga un dibujo de la funci\'on y de la recta con pendiente $f'(0.5)$ que pasa por $(0.5,f(0.5))$.
+\begin{enumerate}
+\item $f(x)=\sin((x+1)^2(x+2))$
+\item $f(x)=\sin^2(x)\sin(x^2)$
+\item $f(x)=(x+\sin^5(x))^6$
+\item $f(x)=\frac{\sin(x)}{1+\sin^2(x)}$
+\end{enumerate}
+
+
+
+
+\end{document}
