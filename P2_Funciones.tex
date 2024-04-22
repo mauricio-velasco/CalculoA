@@ -86,7 +86,7 @@
 
 
 
-\item El símbolo $ReLu(x)=\max(x,0)$. Dibuje las siguientes funciones para $-2\leq x\leq 2$
+\item Defina la función $ReLu(x):=\max(x,0)$. Haga la gráfica de las siguientes funciones para $-2\leq x\leq 2$
 \begin{enumerate}
 \item $f(x)=ReLu(x)$
 \item $f(x)=x+ReLu(x)$
@@ -97,7 +97,7 @@
 \item Recuerde que una función es \emph{par} si $f(x)=f(-x)$ para todo valor de $x$ e impar si $f(-x)=-f(x)$ para todo valor de $x$. Demuestre que toda función se puede escribir de manera única como la suma de una función par y una función impar.
 
 
-\item Nos dicen que $\lim_{x\rightarrow 0}\frac{\sin(x)}{x}=1$ 
+\item Asuma que, como vimos en clase, $\lim_{x\rightarrow 0}\frac{\sin(x)}{x}=1$ 
 \begin{enumerate}
 \item Implemente un programa en Python que calcule los valores de $\frac{\sin(x)}{x}$ cerca de cero (en $0.1$,$0.01$,$0.001$, etc.). Qué dicen estos números sobre el comportamiento de las funciones $\sin(x)$ y $x$ cerca de cero? Haga graficas en \verb!pyplot! que justifiquen su respuesta.
 
@@ -126,12 +126,21 @@
 \item $\lim_{x\rightarrow 0^{+}} f(x)=\infty$.
 \end{enumerate}
 
-\item Si $k$ un entero positivo y $f(x)$ es una función decimos que $f(x)$ tiene \emph{orden polinomial $k$ en el origen} si $\lim_{x\rightarrow 0} \frac{f(x)}{x^k}=1$. Suponga que $f(x)$ tiene orden polinomial $n$ y que $g(x)$ tiene orden polinomial $m$ en el origen y responda las siguientes preguntas justificando rigurosamente su respuesta (las respuestas dependen de $m$ y $n$)
+\item (\emph{Notación o-chica}) Para $a\in \mathbb{R}$ y un entero positivo $k$. Escribimos $f(x)\in o\left((x-a)^k\right)$ si y sólo si 
+\[\lim_{x\rightarrow a} \frac{f(x)}{(x-a)^k} = 0.\]
+(en palabras $f(x)\in o\left((x-a)^k\right)$ se lee \emph{ $f(x)$ tiene orden menor a $k$ en $a$}).
+Demuestre las siguientes afirmaciones para enteros positivos $k,m,n\geq 1$
 
 \begin{enumerate}
-\item Cuánto vale $\lim_{x\rightarrow 0} \frac{f(x)}{g(x)}$?
-\item Cuál es el orden polinomial de la función $f(x)g(x)$ en el origen?
-\item Cuál es el orden polinomial de la función $f(x)+g(x)$ en el origen?
+\item  $(x-3)^{k+1}\in o((x-3)^{k})$ y $(x-3)^{k+1}\not\in o((x-3)^{k})$. 
+\item  Si $f(x)\in o\left((x-a)^{k+1}\right)$ entonces $f(x)\in o\left((x-a)^{k}\right)$.
+\item Si $f(x)\in o\left((x-a)^{m}\right)$ y $g(x)\in o\left((x-a)^{n}\right)$ entonces:
+\begin{enumerate}
+\item $f(x)\cdot g(x)\in o\left((x-a)^{m+n}\right)$
+
+\item $f(x)+ g(x)\in o\left((x-a)^{\min(m,n)}\right)$
+\end{enumerate}
+
 \end{enumerate}
 
 
