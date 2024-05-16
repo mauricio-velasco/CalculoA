@@ -1,0 +1,81 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 5: Algunas aplicaciones.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate}
+\item Resuelva los siguientes problemas de optimización, justificando rigurosamente su razonamiento: 
+
+\begin{enumerate}
+\item Una caja rectangular tiene un volumen de $1000cm^3$. La longitud de la base es el doble de la altura $h$. El material de la base vale $100$ por $cm^2$ y el de la pared $50$ por $cm^2$. Encuentre la función de costo $C(h)$ de la caja y las dimensiones de la caja de costo mínimo.
+\item El punto $(x,y)$ esta en la recta $y=4x+7$. Encuentre la función $d(x)$ que mide la distancia entre $(x,y)$ y el origen y las coordenadas del punto que minimiza esta distancia.
+
+\item Un rectángulo centrado en el origen y paralelo a los ejes tiene longitud de la base $b$ y altura $a$. El rectángulo esta inscrito en el círculo de radio $4$. Encuentre $a(b)$ y el valor de $b$ que maximiza el área del rectángulo.
+
+
+\item Una ventana normanda tiene la forma de un semicírculo pegado a un rectángulo \url{https://search.library.wisc.edu/digital/AGS7KII67JFJ5S8Q}. Si la ventana tiene un perímetro de $8m$. Encuentre la función $A(b)$ que mide el área de la ventana como función de la longitud de la base y las dimensiones que maximizan el área.
+
+\end{enumerate}
+
+\item Haga una implementación del método de Newton con el objetivo de encontrar $\sqrt[3]{2}$ con $10$ cifras decimales correctas (Debe escribir el código de su implementación asi como la justificación del proceso y los resultados obtenidos en las primeras diez iteraciones).
+
+
+\item Utilice lo que sabe de optimización y del método de Newton para encontrar los lugares donde la función $f(x)=3x^4-28x^3+6x^2+24x$ alcanza sus valores máximo y mínimo en el intervalo $-1\leq x\leq 7$. 
+\begin{enumerate}
+\item Haga una gráfica de la función en el intervalo.
+\item Calcule todos los puntos críticos con al menos $5$ decimales correctos. Debe entregar el código de su implementación de las iteraciones de Newton asi como el output de su implementación para cada solución.
+\item Responda a la pregunta de arriba.
+
+\end{enumerate}
+
+\item Encuentre una fórmula para la $n$-\'esima derivada de las siguientes funciones:
+\begin{enumerate}
+\item $f(x)=\sin(2x)$
+\item $f(x)=e^{3x}$
+\item $f(x)=xe^{x}$
+\end{enumerate}
+
+\item Demuestre que $f(x)=x\log(x)$ en $x>0$ y $h(x)=e^x$ en $\mathbb{R}$ son funciones convexas. Incluya gráficas en \verb!pyplot! de las funciones.
+\end{enumerate}
+\end{document}
