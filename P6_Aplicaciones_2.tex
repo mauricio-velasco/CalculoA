@@ -1,0 +1,111 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 6: Ecuaciones diferenciales.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate}
+\item Considere la ecuación diferencial $y'=\frac{y^2-1}{2}$.
+\begin{enumerate}
+\item Demuestre que para todo valor de $c\in \mathbb{R}$ la función $y(t)=\frac{1+ce^t}{1-ce^t}$ es solución de la ecuación diferencial.
+\item Haga una sola gráfica en \verb!pyplot! que contenga las gráficas de  $y(t)$ para $-5\leq t\leq 5$ para $5$ valores distintos de la constante $c$ escogidos por ud (el dibujo debe ser legible y aclarar el valor de $c$ en \verb!legend!).
+\item Encuentre una solución del problema de valor inicial
+\[
+\begin{cases}
+y'=\frac{y^2-1}{2}\\
+y(0)=1
+\end{cases}
+\]
+\end{enumerate}
+\item Considere la ecuación diferencial $y''+2y'+y=0$.
+\begin{enumerate}
+\item Cuáles de las siguientes funciones son soluciones de la ecuación diferencial? Justifique regurosamente su respuesta
+\begin{enumerate}
+\item $y=e^t$
+\item $y=e^{-t}$
+\item $y=te^t$
+\item $y=t^2e^{-t}$
+\end{enumerate}
+\item Demuestre que si $f(t)$ y $h(t)$ son soluciones de la ecuación diferencial tambien lo es $Af(t)+Bh(t)$ para cualquier par de constantes $A$ y $B$.
+\item Utilice las partes $(a)$ y $(b)$ del ejercicio para encontrar una solución del problema de valor inicial
+\[
+\begin{cases}
+y''+2y'+y=0\\
+y(1)=e\\
+y'(1)=e\\
+\end{cases}
+\]
+\end{enumerate}
+\item Haga gráficas en \verb!pyplot! de los campos de direcciones de las siguientes ecuaciones diferenciales:
+
+\begin{enumerate}
+\item $4y'+12y=60$. Qué sucede con las soluciones cuando la variable independiente $x$ aumenta?
+\item $y'=y^3-4y$. Segun el dibujo, para qué valores de la constante $c$ existe el límite $\lim_{x\rightarrow \infty}y(x)$ para una solución con de $y(0)=c$? Cuáles son los valores posibles de este límite? Justifique sus respuestas.
+\end{enumerate}
+
+\item Realice los siguientes pasos:
+\begin{enumerate}
+\item Haga una implementación  del método de Euler en python. Escriba el código de la misma.
+\item Utilice su implementación para calcular soluciones numéricas de los siguientes problemas de valor inicial para $h\in \{0.1,0.01,0.001\}$ y $0\leq x\leq 5$:
+\begin{enumerate}
+\item 
+\begin{cases}
+$y'=x^2+y$\\
+$y(1)=1$
+\end{cases}
+\item
+\begin{cases}
+$y'=y(4-y)$\\
+$y(0)=1$\\
+\end{cases}
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+
+\end{document}
