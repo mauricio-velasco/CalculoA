@@ -1,0 +1,108 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 7: Introducción a integración.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate}
+\item ({\it Arquímedes reloaded}) Para la función $f(x)=x^3$ realice los siguientes pasos:
+\begin{enumerate}
+\item Si $P$ es una partición del intervalo $[0,1]$ en $n$ intervalos de igual longitud, encuentre fórmulas para $L(f,P)$ y $U(f,P)$ como sumatorias con $n$ términos.
+\item Calcule el valor de estas sumatorias usando el Problema $7$ del práctico $[P1]$ como función de $n$.
+\item Calcule el límite cuando $n\rightarrow \infty$ en sus f\'ormulas.
+\item Use lo anterior para calcular el valor de $\int_0^1x^3 dx$ justificando rigurosamente su respuesta.
+\end{enumerate}
+
+\item Sea $g(x)=\frac{1}{\sqrt{2\pi}}\exp\left({-\frac{x^2}{2}}\right)$, esta función se llama \emph{densidad de la normal standard} ó densidad gaussiana y juega un papel central en probabilidad y estadística.
+\begin{enumerate}
+\item Haga la gráfica de la función en \verb!pyplot!. 
+
+\item Dados $a,b\in \mathbb{R}$ con $a<b$ sea $P_n$ la partición de $[a,b]$ en $n$ partes iguales. Escriba una fórmula para el punto $t_j$ que es el extremo izquierdo del $j$-'esimo intervalo para $j=1,\dots, n$ y fórmulas para $m_j$ y $M_j$ que denotan el valor mínimo y máximo de $g(x)$ en el $j$-ésimo intervalo de la partición respectivamente. Sus fórmulas deben depender sólo de $a,b$ y $n$.
+
+\item Usando lo anterior, implemente en \verb!python! funciones que reciban una cota inferior $a$, una cota superior $b$ y un número de partes $n$ y calculen $L(g,P_n)$ y $U(g,P_n)$ donde $P_n$ denota la partición de $[a,b]$ en $n$ partes iguales.
+
+\item Usando su implementación produzca
+
+\begin{enumerate}
+\item Una tabla con $L(g,P_n)$ y $U(g,P_n)$ para $a=0$, $b=1$ y $n$ variando entre $100$ y $1000$ en incrementos de $100$.
+
+\item Una tabla con $L(g,P_n)$ y $U(g,P_n)$ para $a=1$, $b=2$ y $n$ variando entre $100$ y $1000$ en incrementos de $100$.
+\item Qué tan grande debe ser $n$ para que los primeros dos decimales despues de la coma sean correctos? Responda en los dos casos.
+\item Estime el valor de $\int_0^{\infty} g(x)dx$ usando su programa.
+\end{enumerate} 
+\end{enumerate}
+
+\item Use el Teorema fundamental del cálculo para calcular las siguientes integrales de manera exacta. Justifique rigurosamente todos sus pasos.
+
+\begin{enumerate}
+\item $\int_1^24\sin(x)-3x^5+6\sqrt{x}dx=$
+\item $\int_1^4\frac{1}{\sqrt{x}}dx=$
+\item $\int_\pi^{2\pi}\cos(\theta)d\theta=$
+\item $\int_{ln(3)}^{ln(6)}8e^tdt=$
+\end{enumerate}
+
+\item Sea 
+\[f(x)=\begin{cases}
+0,\text{ si $x< 0$}\\
+x,\text{ si $0\leq x\leq 1$}\\
+2-x,\text{ si $1<x\leq  2$}\\
+0,\text{ si $x> 2$}\\
+\end{cases}\]
+y defina $g(x)=\int_0^x f(t)dt$
+\begin{enumerate}
+\item Encuentre una expresión para $g(x)$ semejante a la de $f(x)$.
+\item Haga la gráfica de $f(x)$ y $g(x)$ en \verb!pyplot!. Incluya su código y las imágenes.
+\item En qué subconjunto de $\mathbb{R}$ es $f(x)$ diferenciable? Justifique su respuesta.
+\item En qué subconjunto de $\mathbb{R}$ es $g(x)$ diferenciable? Justifique su respuesta. 
+\end{enumerate}
+\item Encuentre las derivadas de las siguientes funciones usando la regla de la cadena y el teorema fundamental del cálculo donde sea apropiado.
+\begin{enumerate}
+\item $F(x)=\int_0^{x^2}\sin^3(t)dt$
+\item \[F(x)=\int_0^{\left(\int_1^x\frac{1}{y}dy\right)}\frac{1}{1+t^2}dt\]
+\item $F(x)=\int_0^x xf(t)dt$ (Ayuda: La respuesta NO ES $xf(x)$).
+
+\end{enumerate}
+
+
+
+\end{document}
