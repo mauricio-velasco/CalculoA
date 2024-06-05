@@ -1,0 +1,103 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+\newcommand{\EE}{\mathbb{E}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 8: Integración y algunas aplicaciones.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate}
+\item Utilice una sustitución para encontrar todas las primitivas de las siguientes funciones,
+\begin{enumerate}
+\item $\int x^3\cos(x^4+7)dx =$
+\item $\int \frac{2x}{\sqrt{1-4x^2}} =$
+\item $\int \sin(5x)dx =$
+\item $\int \sec^2(6\theta)d\theta=$
+\item $\int \cos(x)\cos(\sin(x))dx=$
+\end{enumerate}
+
+\item Evalue todas las integrales del ejercicio anterior en el intervalo donde la variable recorre $[1,\pi]$. Acompañe cada integral con una gráfica del integrando en \verb!pyplot! en la región de interés. Marque el área que representa el valor de la integral en cada caso.
+
+\item La tasa de producción de circuitos de una compañía esta dada por
+\[y'(t) = 5000\left(1-\frac{100}{(t+10)^2}\right)\]
+con $t$ medido en semanas.
+\begin{enumerate}
+\item Cuántos circuitos se producen desde el principio de la tercera semana hasta el final de la cuarta? 
+\item Si en el instante inicial la compañia tenia $y(0)=1000$ circuitos encuentre una fórmula para el número total de circuitos disponibles en el instante $t$ para $t\geq 0$
+\end{enumerate}
+
+\item La función de Fresnel esta dada por
+\[C(x)=\int_0^x\cos(\pi t^2/2)dt\]
+\begin{enumerate}
+\item En qué intervalos es $C(x)$ una función decreciente?
+\item En qué intervalos es $C(x)$ una función convexa?
+\item Explique cómo usaría el método de Newton para resolver la ecuación 
+\[\int_0^x\cos(\pi t^2/2)dt = 0.7\]
+\item Implemente en \verb!python! su solución del numeral anterior y encuentre una aproximación a la solución con $3$ cifras decimales correctas.
+\end{enumerate}  
+
+\item Sea $f(x)=x^2$ para $0\leq x\leq 1$ y suponga que $X$ es una variable aleaoria con $\mathbb{P}(X\in [a,b])$ proporcional a $\int_a^b f(x)dx$ para todos $a,b$.
+\begin{enumerate}
+\item Encuentre la función de densidad de $X$.
+\item Cuál es la probabilidad de que $X$ sea menor que $1/2$?
+\item Encuentre una fórmula para el valor esperado de $X$.
+\item Encuentre una fórmula para $\EE[X^k]$ para cada entero positivo $k$. Calcule el valor de la varianza de $X$.
+\end{enumerate}
+
+\item Una variable aleatoria $X$ tiene distribución exponencial con parámetro dado $\lambda>0$ si su densidad esta dada por la fórmula
+\[f(x)=\begin{cases}
+\lambda \exp(\lambda x)\text{ , si $x>0$}\\
+0\text{ , de lo contrario.}
+\end{cases}
+\]
+\begin{enumerate}
+\item Demuestre que $f(x)$ es una distribución de probabilidad.
+\item Demuestre que el valor esperado de $X$ es $1/\lambda$.
+\item Calcule la varianza de $X$.
+\end{enumerate}
+
+\end{enumerate}
+
+ 
+\end{enumerate}
+
+\end{document}
